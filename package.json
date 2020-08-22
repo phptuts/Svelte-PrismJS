@@ -1,7 +1,7 @@
 {
   "name": "svelte-prismjs",
   "description": "This package is used to help people include prismjs in their svelte, sapper and routify projects.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "email": "glaserpower@gmail.com",
     "name": "Noah Glaser",
