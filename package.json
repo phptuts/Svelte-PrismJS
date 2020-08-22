@@ -5,7 +5,14 @@
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "svelte": "src/index.js",
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/nglaser"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phptuts/Svelte-Prism"
+  },
+  "homepage": "https://github.com/phptuts/Svelte-Prism",
   "scripts": {
     "build-package": "rollup -c rollup-package.config.js",
     "build": "rollup -c",
