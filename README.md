@@ -76,7 +76,7 @@ import "prismjs/themes/prism-coy.css";
 
 ## Examples
 
-[Full Examples]()
+[Full Examples](https://phptuts.github.io/Svelte-Prism/)
 
 ### Simple Example using the slot. Language will default to javascript.
 
