@@ -1,13 +1,19 @@
 {
   "name": "svelte-prismjs",
-  "description": "This app is used to help people include prismjs in their svelte, sapper and routify projects.",
+  "description": "This package is used to help people include prismjs in their svelte, sapper and routify projects.",
   "version": "1.0.0",
+  "author": {
+    "email": "glaserpower@gmail.com",
+    "name": "Noah Glaser",
+    "url": "https://codingwithnoah.com"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "svelte": "src/index.js",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/nglaser"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/phptuts/Svelte-Prism"
