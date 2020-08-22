@@ -96,11 +96,8 @@ function helloworld() {
 <Prism
   showLineNumbers="{true}"
   language="c"
-  code="{`"
-  int
-  b="3;"
-  int
-  c="32;"
+  code="{`int b= 3;
+int c=32;
   `}
 />
 ```
