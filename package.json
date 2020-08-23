@@ -16,9 +16,9 @@
   "svelte": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/phptuts/Svelte-Prism"
+    "url": "https://github.com/phptuts/Svelte-PrismJS"
   },
-  "homepage": "https://github.com/phptuts/Svelte-Prism",
+  "homepage": "https://github.com/phptuts/Svelte-PrismJS",
   "scripts": {
     "build-package": "rollup -c rollup-package.config.js",
     "build": "rollup -c",
