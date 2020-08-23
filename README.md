@@ -1,19 +1,27 @@
 ## Svelte JS Prism
 
-This package was inspired by the svelte-prism.
+This package is a wrapper for prismjs. It works with line numbers and whitespace clean up out of the box. You can enable other plugins and languages as well. It was inspired by svelte-prism, another svelte prism package.
+
+[Live Svelte Demo](https://phptuts.github.io/Svelte-Prism/)
+
+The repo has the svelte code to run the demo.
+
+[Sapper Example](https://github.com/phptuts/svelte-prismjs-sapper)
+
+[Routify Example](https://github.com/phptuts/routify-prismjs-example)
 
 ## Features
 
-- Supports Prism JS plugins and data attributes
+- Supports Prism JS plugins and data attributes being passed to the pre element.
 - Allows for client side loading in sapper and routify.
-- Supports auto reloading for the elements code needs to change.
+- Supports code being changed dynamically in the prism html element.
 - Examples and setup instructions.
 
 ## Svelte Setup Instructions
 
 1. Run npm install --save-dev svelte-prismjs
 
-2. Load the css via cdn or use rollup-plugin-css-only. You can also use CDN. You will need a theme file line-number css file is you are using it.
+2. Load the css via cdn or use rollup-plugin-css-only.
 
 [PRISM CDN](https://cdnjs.com/libraries/prism)
 
@@ -44,7 +52,7 @@ import "prismjs/themes/prism-coy.css";
 <link rel="stylesheet" href="/build/extra.css" />
 ```
 
-#### CDN links to copy to your index.html
+### CDN links to copy to your index.html
 
 ```html
 <!-- base theme -->
@@ -72,7 +80,71 @@ import "prismjs/themes/prism-coy.css";
 
 ## Sapper Instructions
 
+[Sapper Example](https://github.com/phptuts/svelte-prismjs-sapper)
+
+1. Run npm install svelte-prismjs
+
+2. You can either include the cdn links in your template.html file or you can install the rollup-css-only-plugin. It's basically what step 2 is for svelte minus different directories. For sapper be sure you put the file in the static folder.
+
+3. Import Prism Svelte. Becuase prism uses the window object we have to do some weird stuff to get it work. For now here is the work around.
+
+```svelte
+let Prism;
+onMount(async () => {
+    // Load the prismjs first after the page is loaded
+    const prismModule = await import("svelte-prismjs");
+    await import("prismjs/components/prism-c.js");
+    await import("prism-svelte");
+
+    await import("prismjs/plugins/line-highlight/prism-line-highlight.js");
+    await import("prismjs/plugins/file-highlight/prism-file-highlight.js");
+    // Once everything is loaded load the prismjs module
+    Prism = prismModule.default;
+
+  });
+
+  <svelte:component this={Prism}>
+  {`let b = 3;
+function helloworld() {
+	console.log("Hello World");
+}
+`}
+</svelte:component>
+
+```
+
 ## Routify Instructions
+
+[Routify Example](https://github.com/phptuts/routify-prismjs-example)
+
+1. Run npm install svelte-prismjs
+
+2. Go to scripts/base.config.js and add the rollup-css-only-plugin or go to the static/\_\_index.html file. If you do use npm to include css you will have to add it to App.svelte file under global styles.
+
+```svelte
+let Prism;
+onMount(async () => {
+    // Load the prismjs first after the page is loaded
+    const prismModule = await import("svelte-prismjs");
+    await import("prismjs/components/prism-c.js");
+    await import("prism-svelte");
+
+    await import("prismjs/plugins/line-highlight/prism-line-highlight.js");
+    await import("prismjs/plugins/file-highlight/prism-file-highlight.js");
+    // Once everything is loaded load the prismjs module
+    Prism = prismModule.default;
+
+  });
+
+  <svelte:component this={Prism}>
+  {`let b = 3;
+function helloworld() {
+	console.log("Hello World");
+}
+`}
+</svelte:component>
+
+```
 
 ## Examples
 
@@ -82,11 +154,7 @@ import "prismjs/themes/prism-coy.css";
 
 ```html
 <Prism>
-    {
-`let b = 3;
-function helloworld() { 
-    console.log("Hello World"); 
-} `}
+  { `let b = 3; function helloworld() { console.log("Hello World"); } `}
 </Prism>
 ```
 
@@ -114,5 +182,5 @@ import "prismjs/components/prism-c.js";
 - showLineNumbers -> (bool) Will turn on and off line numbers for your code. Defaulted to false.
 - normalizeWhiteSpace -> (bool) Will clean up the white space in your code. This is default to true.
 - normalizeWhiteSpaceConfig -> (object) Will be used to over ride the default config. For more information go [here](https://prismjs.com/plugins/normalize-whitespace/).
-- classses -> custom classes for the pre element.
-- You can also pass any data props or styles in the component and it will be applied to the pre element
+- classses -> custom css classes for the pre element.
+- You can also pass any props or styles in the component and it will be applied to the pre element.
