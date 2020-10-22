@@ -2,7 +2,7 @@
 
 This package is a wrapper for prismjs. It works with line numbers and whitespace clean up out of the box. You can enable other plugins and languages as well. It was inspired by svelte-prism, another svelte prism package.
 
-[Live Svelte Demo](https://phptuts.github.io/Svelte-PrismJS/index.html/)
+[Live Svelte Demo](https://phptuts.github.io/Svelte-PrismJS/index.html)
 
 The repo has the svelte code to run the demo.
 
