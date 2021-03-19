@@ -19,9 +19,9 @@ The repo has the svelte code to run the demo.
 
 ## Svelte Setup Instructions
 
-1. Run npm install --save-dev svelte-prismjs
+1. Run `npm install --save-dev svelte-prismjs`
 
-2. Load the css via cdn or use rollup-plugin-css-only.
+2. Load the css via cdn **or** use `rollup-plugin-css-only` (if choosing the later please skip down to Option B).
 
 [PRISM CDN](https://cdnjs.com/libraries/prism)
 
@@ -52,30 +52,30 @@ import "prismjs/themes/prism-coy.css";
 <link rel="stylesheet" href="/build/extra.css" />
 ```
 
-### CDN links to copy to your index.html
+### Option B - CDN links to copy to your index.html
 
 ```html
-<!-- base theme -->
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/themes/prism.min.css"
-  integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ=="
-  crossorigin="anonymous"
-/>
-<!-- coy theme -->
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/themes/prism-coy.min.css"
-  integrity="sha512-CKzEMG9cS0+lcH4wtn/UnxnmxkaTFrviChikDEk1MAWICCSN59sDWIF0Q5oDgdG9lxVrvbENSV1FtjLiBnMx7Q=="
-  crossorigin="anonymous"
-/>
-<!-- Number lines  -->
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/plugins/line-numbers/prism-line-numbers.min.css"
-  integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ=="
-  crossorigin="anonymous"
-/>
+    <!-- base theme -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css"
+    integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ=="
+    crossorigin="anonymous"
+    />
+    <!-- coy theme -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-coy.min.css"
+    integrity="sha512-CKzEMG9cS0+lcH4wtn/UnxnmxkaTFrviChikDEk1MAWICCSN59sDWIF0Q5oDgdG9lxVrvbENSV1FtjLiBnMx7Q=="
+    crossorigin="anonymous"
+    />
+    <!-- Number lines  -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/line-numbers/prism-line-numbers.min.css"
+    integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ=="
+    crossorigin="anonymous"
+    />
 ```
 
 ## Sapper Instructions
