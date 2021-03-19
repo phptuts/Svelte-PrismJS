@@ -27,7 +27,7 @@ The repo has the svelte code to run the demo.
 
 ### Rollup Rollup Config
 
-1. Add the rollup-plugin-css-only to your rollup config file.
+1. Add the `rollup-plugin-css-only` to your `rollup.config.js` file.
 
 ```javascript
 import css from "rollup-plugin-css-only";
@@ -35,7 +35,7 @@ import css from "rollup-plugin-css-only";
 css({ output: "public/build/extra.css" });
 ```
 
-2. Import the css into your main.js file.
+2. Import the css into your `main.js` file.
 
 ```javascript
 import "prismjs/plugins/line-numbers/prism-line-numbers.css";
@@ -46,7 +46,7 @@ import "prismjs/themes/prism.css";
 import "prismjs/themes/prism-coy.css";
 ```
 
-3. Add the extra.css script to your index.html
+3. Add the `extra.css` script to your `index.html`
 
 ```html
 <link rel="stylesheet" href="/build/extra.css" />
@@ -86,9 +86,9 @@ Be sure to double check link integrity at [PRISM CDN](https://cdnjs.com/librarie
 
 1. Run `npm install svelte-prismjs`
 
-2. You can either include the cdn links in your `template.html` file or you can install the `rollup-css-only-plugin`. It is basically what step 2 is for svelte minus different directories. For sapper be sure you put the file in the static folder.
+2. You can either include the cdn links in your `template.html` file or you can install the `rollup-css-only-plugin`. It is basically what step 2 is for Svelte minus different directories. For Sapper be sure you put the file in the static folder.
 
-3. Import Prism Svelte. Because Prism uses the window object we have to do some weird stuff to get it work. For now here is the work around.
+3. Import `Svelte-Prism` (*Because Prism uses the window object we have to do some weird stuff to get it work. For now here is the work around.*).
 
 ```svelte
 let Prism;
@@ -107,7 +107,7 @@ onMount(async () => {
 
   <svelte:component this={Prism}>
   {`let b = 3;
-function helloworld() {
+function helloWorld() {
 	console.log("Hello World");
 }
 `}
