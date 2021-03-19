@@ -4,7 +4,7 @@ This package is a wrapper for PrismJS. It works with line numbers and whitespace
 
 [Live Svelte Demo](https://phptuts.github.io/Svelte-PrismJS/index.html)
 
-The repo has the svelte code to run the demo.
+The repo has the Svelte code to run the demo.
 
 [Sapper Example](https://github.com/phptuts/svelte-prismjs-sapper)
 
@@ -21,7 +21,7 @@ The repo has the svelte code to run the demo.
 
 1. Run `npm install --save-dev svelte-prismjs`
 
-2. Load the css via CDN (if loading via CDN skip ahead to Option B) **or** 
+2. Load the css via CDN (if loading via CDN skip ahead to Option B) __or__ 
 
 3. `npm install rollup-plugin-css-only` 
 
