@@ -21,9 +21,9 @@ The repo has the svelte code to run the demo.
 
 1. Run `npm install --save-dev svelte-prismjs`
 
-2. Load the css via CDN **or** use `rollup-plugin-css-only` (if loading via CDN skip ahead to Option B).
+2. Load the css via CDN (if loading via CDN skip ahead to Option B) **or** 
 
-[PRISM CDN](https://cdnjs.com/libraries/prism)
+3. `npm install rollup-plugin-css-only` 
 
 ### Rollup Rollup Config
 
@@ -53,6 +53,8 @@ import "prismjs/themes/prism-coy.css";
 ```
 
 ### Option B - CDN links to copy to your index.html
+
+Be sure to double check link integrity at [PRISM CDN](https://cdnjs.com/libraries/prism)
 
 ```html
     <!-- base theme -->
