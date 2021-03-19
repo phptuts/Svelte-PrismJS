@@ -21,11 +21,11 @@ The repo has the Svelte code to run the demo.
 
 1. Run `npm install --save-dev svelte-prismjs`
 
-2. Load the css via CDN (if loading via CDN skip ahead to Option B) __or__ ... 
+2. Load the css via CDN (if loading via CDN skip ahead to Option B) or... 
 
 3. `npm install rollup-plugin-css-only` 
 
-### Rollup Rollup Config
+### Rollup Config
 
 1. Add the `rollup-plugin-css-only` to your `rollup.config.js` file.
 
