@@ -1,6 +1,6 @@
 ## Svelte JS Prism
 
-This package is a wrapper for prismjs. It works with line numbers and whitespace clean up out of the box. You can enable other plugins and languages as well. It was inspired by svelte-prism, another svelte prism package.
+This package is a wrapper for PrismJS. It works with line numbers and whitespace clean up out of the box. You can enable other plugins and languages as well. It was inspired by [svelte-prism](https://github.com/jakobrosenberg/svelte-prism), another Svelte Prism package.
 
 [Live Svelte Demo](https://phptuts.github.io/Svelte-PrismJS/index.html)
 
@@ -12,9 +12,9 @@ The repo has the svelte code to run the demo.
 
 ## Features
 
-- Supports Prism JS plugins and data attributes being passed to the pre element.
-- Allows for client side loading in sapper and routify.
-- Supports code being changed dynamically in the prism html element.
+- Supports PrismJS plugins and data attributes being passed to the pre element.
+- Allows for client side loading in Sapper and Routify.
+- Supports code being changed dynamically in the Prism html element.
 - Examples and setup instructions.
 
 ## Svelte Setup Instructions
