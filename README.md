@@ -1,4 +1,4 @@
-## Svelte JS Prism
+## SvelteJS Prism
 
 This package is a wrapper for PrismJS. It works with line numbers and whitespace clean up out of the box. You can enable other plugins and languages as well. It was inspired by [svelte-prism](https://github.com/jakobrosenberg/svelte-prism), another Svelte Prism package.
 
@@ -21,7 +21,7 @@ The repo has the Svelte code to run the demo.
 
 1. Run `npm install --save-dev svelte-prismjs`
 
-2. Load the css via CDN (if loading via CDN skip ahead to Option B) or... 
+2. Load the css via CDN (if loading via CDN skip ahead to [Option B](https://github.com/Isaac-Tait/Svelte-PrismJS#option-b---cdn-links-to-copy-to-your-indexhtml)) or... 
 
 3. `npm install rollup-plugin-css-only` 
 
