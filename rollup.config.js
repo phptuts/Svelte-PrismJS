@@ -5,7 +5,7 @@ import livereload from "rollup-plugin-livereload";
 import { terser } from "rollup-plugin-terser";
 import css from "rollup-plugin-css-only";
 import copy from "rollup-plugin-copy";
-import ghPages from 'gh-pages';
+import ghPages from "gh-pages";
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -52,15 +52,15 @@ export default {
       ],
     }),
     svelte({
-      // enable run-time checks when not in production
-      dev: !production,
-      // we'll extract any component CSS out into
-      // a separate file - better for performance
-      css: (css) => {
-        css.write("public/build/bundle.css");
+      compilerOptions: {
+        // enable run-time checks when not in production
+        dev: !production,
       },
     }),
-    css({ output: "public/build/extra.css" }),
+    // we'll extract any component CSS out into
+    // a separate file - better for performance
+    css({ output: "bundle.css" }),
+
     // If you have external dependencies installed from
     // npm, you'll most likely need these plugins. In
     // some cases you'll need additional configuration -
@@ -82,9 +82,11 @@ export default {
 
     // If we're building for production (npm run build
     // instead of npm run dev), minify
-	  production && terser() && ghPages.publish('public', () => {
-		console.log('published to github')
-	}),
+    production &&
+      terser() &&
+      ghPages.publish("public", () => {
+        console.log("published to github");
+      }),
   ],
   watch: {
     clearScreen: false,
