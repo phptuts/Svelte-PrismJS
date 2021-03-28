@@ -21,21 +21,13 @@ The repo has the Svelte code to run the demo.
 
 1. Run `npm install --save-dev svelte-prismjs`
 
-2. Load the css via CDN (if loading via CDN skip ahead to [Option B](https://github.com/Isaac-Tait/Svelte-PrismJS#option-b---cdn-links-to-copy-to-your-indexhtml)) or... 
+2. Load the css via CDN (if loading via CDN skip ahead to [Option B](https://github.com/Isaac-Tait/Svelte-PrismJS#option-b---cdn-links-to-copy-to-your-indexhtml)) or...
 
-3. `npm install rollup-plugin-css-only` 
+3. `npm install rollup-plugin-css-only`
 
 ### Rollup Config
 
-1. Add the `rollup-plugin-css-only` to your `rollup.config.js` file.
-
-```javascript
-import css from "rollup-plugin-css-only";
-
-css({ output: "public/build/extra.css" });
-```
-
-2. Import the css into your `main.js` file.
+1. Import the css into your `main.js` file.
 
 ```javascript
 import "prismjs/plugins/line-numbers/prism-line-numbers.css";
@@ -46,38 +38,32 @@ import "prismjs/themes/prism.css";
 import "prismjs/themes/prism-coy.css";
 ```
 
-3. Add the `extra.css` script to your `index.html`
-
-```html
-<link rel="stylesheet" href="/build/extra.css" />
-```
-
 ### Option B - CDN links to copy to your index.html
 
 Be sure to double check link integrity at [PRISM CDN](https://cdnjs.com/libraries/prism)
 
 ```html
-    <!-- base theme -->
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css"
-    integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ=="
-    crossorigin="anonymous"
-    />
-    <!-- coy theme -->
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-coy.min.css"
-    integrity="sha512-CKzEMG9cS0+lcH4wtn/UnxnmxkaTFrviChikDEk1MAWICCSN59sDWIF0Q5oDgdG9lxVrvbENSV1FtjLiBnMx7Q=="
-    crossorigin="anonymous"
-    />
-    <!-- Number lines  -->
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/line-numbers/prism-line-numbers.min.css"
-    integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ=="
-    crossorigin="anonymous"
-    />
+<!-- base theme -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css"
+  integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ=="
+  crossorigin="anonymous"
+/>
+<!-- coy theme -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-coy.min.css"
+  integrity="sha512-CKzEMG9cS0+lcH4wtn/UnxnmxkaTFrviChikDEk1MAWICCSN59sDWIF0Q5oDgdG9lxVrvbENSV1FtjLiBnMx7Q=="
+  crossorigin="anonymous"
+/>
+<!-- Number lines  -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/line-numbers/prism-line-numbers.min.css"
+  integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ=="
+  crossorigin="anonymous"
+/>
 ```
 
 ## Sapper Instructions
