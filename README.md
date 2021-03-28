@@ -74,7 +74,7 @@ Be sure to double check link integrity at [PRISM CDN](https://cdnjs.com/librarie
 
 2. You can either include the cdn links in your `template.html` file or you can install the `rollup-css-only-plugin`. It is basically what step 2 is for Svelte minus different directories. For Sapper be sure you put the file in the static folder.
 
-3. Import `Svelte-Prism` (_Because Prism uses the window object we have to do some weird stuff to get it work. For now here is the work around._).
+3. Import `Svelte-Prism` (*Because Prism uses the window object we have to do some weird stuff to get it work. For now here is the work around.*).
 
 ```svelte
 let Prism;
