@@ -1,10 +1,10 @@
-## Svelte JS Prism
+## SvelteJS Prism
 
-This package is a wrapper for prismjs. It works with line numbers and whitespace clean up out of the box. You can enable other plugins and languages as well. It was inspired by svelte-prism, another svelte prism package.
+This package is a wrapper for PrismJS. It works with line numbers and whitespace clean up out of the box. You can enable other plugins and languages as well. It was inspired by [svelte-prism](https://github.com/jakobrosenberg/svelte-prism), another Svelte Prism package.
 
 [Live Svelte Demo](https://phptuts.github.io/Svelte-PrismJS/index.html)
 
-The repo has the svelte code to run the demo.
+The repo has the Svelte code to run the demo.
 
 [Sapper Example](https://github.com/phptuts/svelte-prismjs-sapper)
 
@@ -12,22 +12,22 @@ The repo has the svelte code to run the demo.
 
 ## Features
 
-- Supports Prism JS plugins and data attributes being passed to the pre element.
-- Allows for client side loading in sapper and routify.
-- Supports code being changed dynamically in the prism html element.
+- Supports PrismJS plugins and data attributes being passed to the pre element.
+- Allows for client side loading in Sapper and Routify.
+- Supports code being changed dynamically in the Prism html element.
 - Examples and setup instructions.
 
 ## Svelte Setup Instructions
 
-1. Run npm install --save-dev svelte-prismjs
+1. Run `npm install --save-dev svelte-prismjs`
 
-2. Load the css via cdn or use rollup-plugin-css-only.
+2. Load the css via CDN (if loading via CDN skip ahead to [Option B](https://github.com/Isaac-Tait/Svelte-PrismJS#option-b---cdn-links-to-copy-to-your-indexhtml)) or... 
 
-[PRISM CDN](https://cdnjs.com/libraries/prism)
+3. `npm install rollup-plugin-css-only` 
 
-### Rollup Rollup Config
+### Rollup Config
 
-1. Add the rollup-plugin-css-only to your rollup config file.
+1. Add the `rollup-plugin-css-only` to your `rollup.config.js` file.
 
 ```javascript
 import css from "rollup-plugin-css-only";
@@ -35,7 +35,7 @@ import css from "rollup-plugin-css-only";
 css({ output: "public/build/extra.css" });
 ```
 
-2. Import the css into your main.js file.
+2. Import the css into your `main.js` file.
 
 ```javascript
 import "prismjs/plugins/line-numbers/prism-line-numbers.css";
@@ -46,47 +46,49 @@ import "prismjs/themes/prism.css";
 import "prismjs/themes/prism-coy.css";
 ```
 
-3. Add the extra.css script to your index.html
+3. Add the `extra.css` script to your `index.html`
 
 ```html
 <link rel="stylesheet" href="/build/extra.css" />
 ```
 
-### CDN links to copy to your index.html
+### Option B - CDN links to copy to your index.html
+
+Be sure to double check link integrity at [PRISM CDN](https://cdnjs.com/libraries/prism)
 
 ```html
-<!-- base theme -->
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/themes/prism.min.css"
-  integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ=="
-  crossorigin="anonymous"
-/>
-<!-- coy theme -->
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/themes/prism-coy.min.css"
-  integrity="sha512-CKzEMG9cS0+lcH4wtn/UnxnmxkaTFrviChikDEk1MAWICCSN59sDWIF0Q5oDgdG9lxVrvbENSV1FtjLiBnMx7Q=="
-  crossorigin="anonymous"
-/>
-<!-- Number lines  -->
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/plugins/line-numbers/prism-line-numbers.min.css"
-  integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ=="
-  crossorigin="anonymous"
-/>
+    <!-- base theme -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css"
+    integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ=="
+    crossorigin="anonymous"
+    />
+    <!-- coy theme -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-coy.min.css"
+    integrity="sha512-CKzEMG9cS0+lcH4wtn/UnxnmxkaTFrviChikDEk1MAWICCSN59sDWIF0Q5oDgdG9lxVrvbENSV1FtjLiBnMx7Q=="
+    crossorigin="anonymous"
+    />
+    <!-- Number lines  -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/line-numbers/prism-line-numbers.min.css"
+    integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ=="
+    crossorigin="anonymous"
+    />
 ```
 
 ## Sapper Instructions
 
 [Sapper Example](https://github.com/phptuts/svelte-prismjs-sapper)
 
-1. Run npm install svelte-prismjs
+1. Run `npm install svelte-prismjs`
 
-2. You can either include the cdn links in your template.html file or you can install the rollup-css-only-plugin. It's basically what step 2 is for svelte minus different directories. For sapper be sure you put the file in the static folder.
+2. You can either include the cdn links in your `template.html` file or you can install the `rollup-css-only-plugin`. It is basically what step 2 is for Svelte minus different directories. For Sapper be sure you put the file in the static folder.
 
-3. Import Prism Svelte. Becuase prism uses the window object we have to do some weird stuff to get it work. For now here is the work around.
+3. Import `Svelte-Prism` (*Because Prism uses the window object we have to do some weird stuff to get it work. For now here is the work around.*).
 
 ```svelte
 let Prism;
@@ -105,7 +107,7 @@ onMount(async () => {
 
   <svelte:component this={Prism}>
   {`let b = 3;
-function helloworld() {
+function helloWorld() {
 	console.log("Hello World");
 }
 `}
@@ -117,9 +119,9 @@ function helloworld() {
 
 [Routify Example](https://github.com/phptuts/routify-prismjs-example)
 
-1. Run npm install svelte-prismjs
+1. Run `npm install svelte-prismjs`
 
-2. Go to scripts/base.config.js and add the rollup-css-only-plugin or go to the static/\_\_index.html file. If you do use npm to include css you will have to add it to App.svelte file under global styles.
+2. Go to `scripts/base.config.js` and add the `rollup-css-only-plugin` or go to the `static/\_\_index.html` file. If you do use npm to include css you will have to add it to `App.svelte` file under global styles.
 
 ```svelte
 let Prism;
@@ -138,7 +140,7 @@ onMount(async () => {
 
   <svelte:component this={Prism}>
   {`let b = 3;
-function helloworld() {
+function helloWorld() {
 	console.log("Hello World");
 }
 `}
@@ -154,7 +156,7 @@ function helloworld() {
 
 ```html
 <Prism>
-  { `let b = 3; function helloworld() { console.log("Hello World"); } `}
+  { `let b = 3; function helloWorld() { console.log("Hello World"); } `}
 </Prism>
 ```
 
@@ -182,5 +184,5 @@ import "prismjs/components/prism-c.js";
 - showLineNumbers -> (bool) Will turn on and off line numbers for your code. Defaulted to false.
 - normalizeWhiteSpace -> (bool) Will clean up the white space in your code. This is default to true.
 - normalizeWhiteSpaceConfig -> (object) Will be used to over ride the default config. For more information go [here](https://prismjs.com/plugins/normalize-whitespace/).
-- classses -> custom css classes for the pre element.
-- You can also pass any props or styles in the component and it will be applied to the pre element.
+- classes -> custom css classes for the pre-element.
+- You can also pass any props or styles in the component and it will be applied to the pre-element.
