@@ -23,7 +23,7 @@
   // Turns on and off cleanup plugin
   export let normalizeWhiteSpace = true;
 
-  // The defualt config for cleanup white space
+  // The default config for cleanup white space
   export let normalizeWhiteSpaceConfig = {
     "remove-trailing": true,
     "remove-indent": true,
