@@ -11,7 +11,7 @@
   export let code = "";
 
   // link https://prismjs.com/#supported-languages
-  // import from 'prismjs/components/prism-{lanugage-name}.js'
+  // import from 'prismjs/components/prism-{language-name}.js'
   // The language being rendered
   export let language = "javascript";
 
@@ -61,7 +61,7 @@
 
   afterUpdate(async (node) => {
     // code variable if they are using a prop
-    // Have to use innerText because innerHTML will create weird escape characaters
+    // Have to use innerText because innerHTML will create weird escape characters
     if (fakeCodeEl && fakeCodeEl.innerText !== "") {
       code = fakeCodeEl.innerText;
     }
